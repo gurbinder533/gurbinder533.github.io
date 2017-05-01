@@ -2,11 +2,11 @@
 layout: about
 ---
 
-I’m Ankit. I like to mess around with new technologies. My interests are in distributed systems and operating systems. I aspire to create things.
+I’m Gurbinder. I am a Phd student and a technology enthusiast. I like to mess around with new technologies. My interests are in distributed systems, big data graph analytics and parallel computing. I aspire to learn and create things in my field.
 
-I enjoy playing play soccer, listen to music, play Age of Empires; you know normal stuff. I watch way too much TV and like to read about new technologies. Once in a while I like a good cup of coffee; so if you know of a good place for coffee, hit me up!
+I enjoy playing play soccer, listen to music, paint, sketch and read. I love FOOD; I love to try out new cuisines, so if you know of a good place for coffee, hit me up!
 
-I like to learn languages. Puedo hablar Español, हिन्दी and ਪੰਜਾਬੀ . I’d like to learn French better and Mandarin Chinese.
+I like to learn languages. I know हिन्दी , ਪੰਜਾਬੀ  and english. I am trying to learn spanish, but still working on it.
 
 <br/>
 _Since you are here, enjoy the mesmerizing cat._
