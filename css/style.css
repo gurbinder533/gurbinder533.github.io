@@ -89,7 +89,8 @@ ul.inline li:last-child:after { content: ""; }
 
 a#logo {
     display: inline-block;
-    background-color: #cc5500 ;
+    /* background-color: #cc5500 ; */
+    background-color: #070707 ;
     color: white;
     font-size: 1.3em;
     padding: 12px;
@@ -102,9 +103,9 @@ a#logo:hover {
 }
 
 img#logo_image {
-  width: 400px;
-  height: 58px;
-  margin: 0 12px -24px 0;
+  width: 350px;
+  height: 60px;
+  margin: 0 -100px -24px 280px;
 }
 
 ul#nav {
