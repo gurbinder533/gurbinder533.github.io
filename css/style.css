@@ -1,0 +1,289 @@
+/* Box model */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Page layout */
+body {
+    margin: 0;
+}
+
+#container {
+    margin: 0 auto;
+    max-width: 864px;
+    text-align: left;
+    padding: 16px;
+}
+
+@media all and (min-width: 600px) {
+    #container { padding: 32px; }
+}
+
+/* Text */
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.3em;
+    text-align: center;
+}
+
+.section { margin: 0 0 0 0.5em; }
+
+p { margin: 0.5em 0; }
+
+ul {
+    margin-left: 40px;
+    padding-left: 0;
+}
+
+ul li {
+    line-height: 1.2em;
+    margin: 0.5em 0;
+}
+
+ul.compact li { margin: 0.1em 0; }
+
+/* Links */
+a { text-decoration: none; }
+a:link { color: #cc5500; }
+a:visited { color: #4A5B78; }
+a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+/* Image links */
+a img { border: 1px solid #FFF; }
+a:hover img { border: 1px solid #999; }
+
+/* Headings */
+h2 {
+    color: #333;
+    font-size: 1.4em;
+    margin: 1em 0 0.75em 0;
+}
+
+/* Inline list items separated by dashes */
+ul.inline {
+    margin: 0.5em 0;
+    padding: 0;
+}
+
+ul.inline li { display: inline; }
+ul.inline li:after { content: " - "; }
+ul.inline li:last-child:after { content: ""; }
+
+/* Header */
+#header {
+    border-bottom: 1px solid #CCC;
+    margin: 0 0 12px 0;
+    text-align: center;
+}
+
+@media all and (min-width: 600px) {
+    #header { text-align: left; }
+}
+
+
+a#logo {
+    display: inline-block;
+    background-color: #cc5500 ;
+    color: white;
+    font-size: 1.3em;
+    padding: 12px;
+    margin: 0 12px 12px 0;
+    text-decoration: none;
+}
+
+a#logo:hover {
+  background-color: orange;
+}
+
+img#logo_image {
+  width: 400px;
+  height: 58px;
+  margin: 0 12px -24px 0;
+}
+
+ul#nav {
+  display: inline-block;
+  margin: 0 0 12px 0;
+  line-height: 1em;
+}
+
+ul#nav li {
+  display: inline;
+  font-size: 1.2em;
+  line-height: 1em;
+    list-style-type: none;
+}
+
+ul#nav li:after {
+    content: " / ";
+}
+
+ul#nav li:last-child:after {
+    content: "";
+}
+
+ul#nav li.current a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Footer */
+#footer {
+    border-top: 1px solid #CCC;
+    clear: both;
+    color: #666;
+    font-size: 80%;
+    margin: 12px 0 0 0;
+    padding: 8px 0 0 0;
+    text-align: right;
+}
+
+/* General-purpose floating image */
+.img {
+    display: block;
+    text-align: center;
+}
+
+.img img {
+    max-width: 100%;
+    max-height: 150px;
+}
+
+.img .caption {
+    display: block;
+}
+
+@media all and (min-width: 600px) {
+    .img {
+        float: right;
+        max-width: 25%;
+        padding: 0 0 16px 16px;
+        box-sizing: border-box;
+    }
+
+    .img img {
+        max-height: 200px;
+    }
+}
+
+/* Resume-style entries */
+.position {
+    margin: 8px 0;
+    /* Don't let floats escape */
+    overflow: hidden;
+}
+
+.employer {
+    float: left;
+    width: 50%;
+    font-weight: bold;
+}
+
+.period {
+    float: left;
+    width: 50%;
+    text-align: right;
+}
+
+.position-body {
+    float: left;
+    width: 100%;
+}
+
+.position-logo {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.position-logo img {
+    max-width: 100%;
+    max-height: 75px;
+}
+
+@media all and (min-width: 600px) {
+    .employer { width: 37.5%; }
+    .period { width: 37.5%; }
+    .position-body {
+		width: 75%;
+	}
+    .position-logo {
+        width: 25%;
+        box-sizing: border-box;
+        padding-left: 16px;
+    }
+    .position-logo img {
+        max-height: 100px;
+    }
+}
+
+/* LaTeX-style reference list */
+.ref-list {
+    display: table;
+    padding-left: 12px;
+}
+
+.ref {
+    display: table-row;
+}
+
+.ref-num {
+    display: table-cell;
+    padding-right: 8px;
+}
+
+.ref-entry {
+    display: table-cell;
+}
+
+.venue {
+    font-style: italic;
+}
+
+
+/* Collapsible for html */
+.collapsible {
+    background-color: #d4d3d1;
+    color: #cd5500;
+    cursor: pointer;
+    /*padding: 18px;*/
+    width: 80px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: #f3b80c6e;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+p.abstract {
+    font-style: italic;
+    font-family:"Times New Roman", Times, serif
+}
+
+
+img.thumbnail {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+
+img.thumbnail:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}

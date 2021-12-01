@@ -1,24 +1,461 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>Gurbinder Gill</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
 
-<div class="header">
-    <h1>{{ site.name }}</h1>
-    <ul>
-        {% for item in site.data.navigation %}
-        <li>
-            <a href="{{ item.url }}">{{ item.title }}</a>
-        </li>
-        {% endfor %}
-    </ul>
-</div>
-<div class="blog">
-    <h1>Blog Posts:</h1>
-    <ul>
-        {% for post in site.categories.posts %}
-        <li>
-            <span class="date">{{ post.date | date: '%Y %b %d' }}</span> - <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
-        {% endfor %}
-    </ul>
-</div>
+    <div id="container">
+
+      <div id="header">
+        <a id="logo" href="index.html">Gurbinder Gill</a>
+        <img id ="logo_image" src="images/UTA_CS_logo.png" alt="UT CS logo"> 
+        <!--<ul id="nav">-->
+          <!--<li class="current"><a href="index.html">About</a></li>-->
+          <!--<li><a href="https://github.com/">GitHub</a></li>-->
+          <!--<li><a href="https://sc">Publications</a></li>-->
+          <!--</ul>-->
+      </div>
+
+
+      <div class="section">
+        <div class="img"><img src="images/me.jpg"></div>
+
+        <h2> About </h2>
+        <p>I'm a sixth-year <a href="https://www.cs.utexas.edu/">Computer Science</a> Ph.D. student at the <a href="https://www.utexas.edu/">University of Texas at Austin</a>, working under the guidance of Professor <a href="http://www.cs.utexas.edu/~pingali/">Keshav Pingali</a> in the <a href="http://iss.ices.utexas.edu/"> Intelligent Software Systems (ISS)</a> Group. 
+        I received my B.Tech. in Computer Science from <a href="https://www.iitr.ac.in/">Indian Institute of Technology Roorkee</a>, India in 2012.
+        <br>
+        Before joining Ph.D. program at UT Austin, I worked with  <a href="https://www.research.ibm.com/labs/india/"> IBM Research - India</a>. I have also interned at Georgia Tech (2011), VMware (2013), Facebook (2018), and Microsoft Research (2019).
+
+        </p>
+      </div>
+      <div class="section">
+        <h2> Research Interests </h2>
+        <p>
+        My research interests are High-Performance Computing, Graph Analytics, Compilers, Runtime Systems, Distributed Computing, and Computer Architecture.
+        Currently, I am working on distributed systems for graph analytics applications at a very large scale, both in terms of the size of graphs and number of machines in a distributed cluster. I focus on performance, scalability, productivity, and reliability for these systems.
+        </p>
+      </div>
+
+
+      <div class="section">
+        <h2>Contact</h2>
+        <p><a href="mailto:gill@cs.utexas.edu">gill@cs.utexas.edu</a></p>
+        <p>(737) 932-0300</p>
+        <ul class="inline">
+          <li><a href="https://www.facebook.com/gurbinder.gill" target="_blank">Facebook</a></li>
+          <li><a href="https://www.linkedin.com/in/gurbindergill533" target="_blank">LinkedIn</a></li>
+          <li><a href="https://github.com/gurbinder533" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+
+
+      <div class="section">
+        <h2> Publications </h2>
+
+        <div class="ref-list">
+
+        <div class="ref">
+
+          <div class="ref-num">[1]</div>
+          <div class="ref-entry">
+            Gurbinder Gill (1), Roshan Dathathri (1), Loc Hoang (1), Ramesh Peri (2), Keshav Pingali (1) <i>((1) The University of Texas at Austin, (2) Intel Corporation)</i>. 
+            <a href="https://arxiv.org/abs/1904.07162">Single Machine Graph Analytics on Massive Datasets Using Intel Optane DC Persistent Memory</a>,
+            <a class="venue" href="https://arxiv.org/abs/1904.07162">arXiv </a>.
+            <br>
+            <button class="collapsible">Abstract</button>
+            <div class="content">
+              <p class="abstract">
+
+              Intel Optane DC Persistent Memory is a new kind of byte-addressable memory with higher density and 
+              lower cost than DRAM. This enables affordable systems that support up to 6TB of memory. In this paper, 
+              we use such a system for massive graphs analytics. We discuss how such a system should be deployed for such 
+              applications, and evaluate three existing shared-memory graph frameworks, Galois, GAP, and GraphIt, on large 
+              real-world web-crawls. We recommend algorithms and runtime optimizations for getting the best performance on 
+              such systems using the results of our study. We also show that for these applications, the Galois framework 
+              on Optane DC PMM is on average 2x faster than D-Galois, the state-of-the-art distributed graph framework, 
+              on a production cluster with similar compute power. Thus, Optane DC PMM yields benefits in productivity, 
+              performance, and cost for massive graph analytics.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="ref">
+            <div class="ref-num">[2]</div>
+            <div class="ref-entry">
+               Gurbinder Gill, Roshan Dathathri, Loc Hoang, Keshav Pingali.
+              <a href="http://www.cs.utexas.edu/~gill/papers/partitioning_vldb2019.pdf">A Study of Partitioning Policies for Graph Analytics on Large-scale Distributed Platforms</a>,
+              <a class="venue" href="http://vldb.org/2019/">Proceedings of the International Conference on Very Large Data Bases (PVLDB), 2019 </a>, August 2019.
+              <br>
+              <button class="collapsible">Abstract</button>
+              <div class="content">
+                <p class="abstract">
+                Distributed-memory clusters are used for in-memory processing of
+                very large graphs with billions of nodes and edges. This requires
+                partitioning the graph among the machines in the cluster. When a
+                graph is partitioned, a node in the graph may be replicated on several
+                machines, and communication is required to keep these replicas
+                synchronized. Good partitioning policies attempt to reduce this
+                synchronization overhead while keeping computational load balanced
+                across machines. A number of recent studies have looked at
+                ways to control replication of nodes, but these studies are not conclusive
+                because they were performed on small clusters with eight
+                to sixteen machines, did not consider work-efficient data-driven algorithms,
+                or did not optimize communication for the partitioning
+                strategies they studied.
+                This paper presents an experimental study of partitioning strategies
+                for work-efficient graph analytics applications on large KNL
+                and Skylake clusters with up to 256 machines using the Gluon communication
+                runtime which implements partitioning-specific communication
+                optimizations. Evaluation results show that although
+                simple partitioning strategies like Edge-Cuts perform well on a
+                small number of machines, an alternative partitioning strategy called
+                Cartesian Vertex-Cut (CVC) performs better at scale even though
+                paradoxically it has a higher replication factor and performs more
+                communication than Edge-Cut partitioning does. Results from communication
+                micro-benchmarks resolve this paradox by showing that
+                communication overhead depends not only on communication volume
+                but also on the communication pattern among the partitions.
+                These experiments suggest that high-performance graph analytics
+                systems should support multiple partitioning strategies, like Gluon
+                does, as no single graph partitioning strategy is best for all cluster
+                sizes. For such systems, a decision tree for selecting a good partitioning
+                strategy based on characteristics of the computation and the
+                cluster is presented.
+               </p>
+                </div>
+            </div>
+          </div>
+
+        <div class="ref">
+            <div class="ref-num">[3]</div>
+            <div class="ref-entry">
+               Loc Hoang, Roshan Dathathri, Gurbinder Gill, Keshav Pingali.
+              <a href="http://www.cs.utexas.edu/~gill/papers/cusp_Ipdps19.pdf">CuSP: A Customizable Streaming Edge Partitionerfor Distributed Graph Analytics</a>,
+              <a class="venue" href="http://www.ipdps.org/">IEEE International Parallel and Distributed Processing Symposium (IPDPS), 2019 </a>, May 2019.
+              <br>
+              <button class="collapsible">Abstract</button>
+              <div class="content">
+                <p class="abstract">
+
+                Graph analytics systems must analyze graphs with billions of vertices and edges which require several terabytes of storage. 
+                Distributed-memory clusters are often used for analyzing such large graphs since the main memory of a single machine is usually 
+                restricted to a few hundreds of gigabytes. This requires partitioning the graph among the machines in the cluster. Existing 
+                graph analytics systems usually come with a built-in partitioner that incorporates a particular partitioning policy, but the 
+                best partitioning policy is dependent on the algorithm, input graph,and platform. Therefore, built-in partitioners are not 
+                sufficiently flexible. Stand-alone graph partitioners are available, but they too implement only a small number of partitioning 
+                policies.This paper presents CuSP, a fast streaming edge partitioning framework which permits users to specify the desired 
+                partitioning policy at a high level of abstraction and generates high-quality graph partitions fast. For example, it can 
+                partition wdc12, the largest publicly available web-crawl graph, with 4 billion vertices and 129 billion edges, in under 2 
+                minutes for clusters with 128 machines. Our experiments show that it can produce quality partitions 6× faster on average 
+                than the state-of-the-art stand-alone partitioner in the literature while supporting a wider range of partitioning policies.
+
+               </p>
+                </div>
+            </div>
+          </div>
+          <div class="ref">
+            <div class="ref-num">[4]</div>
+            <div class="ref-entry">
+              Roshan Dathathri*, Gurbinder Gill*, Loc Hoang, Keshav Pingali (* Both authors contributed equally).
+              <a href="http://www.cs.utexas.edu/~gill/papers/phoenix_Asplos2019.pdf">Phoenix: A Substrate for Resilient Distributed Graph Analytics</a>,
+              <a class="venue" href="https://asplos-conference.org/"> ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS), 2019 </a>, April 2019.
+
+              <br>
+              <button class="collapsible">Abstract</button>
+              <div class="content">
+                <p class="abstract">
+                This paper presents Phoenix, a communication and synchronization
+                substrate that implements a novel protocol for
+                recovering from fail-stop faults when executing graph analytics
+                applications on distributed-memory machines. The standard
+                recovery technique in this space is checkpointing, which
+                rolls back the state of the entire computation to a state that
+                existed before the fault occurred. The insight behind Phoenix
+                is that this is not necessary since it is sufficient to continue
+                the computation from a state that will ultimately produce the
+                correct result. We show that for graph analytics applications,
+                the necessary state adjustment can be specified easily by the
+                application programmer using a thin API supported by the
+                Phoenix system.
+                Phoenix has no observable overhead during fault-free execution,
+                and it is resilient to any number of faults while guaranteeing
+                that the correct answer will be produced at the end
+                of the computation. This is in contrast to other systems in this
+                space which may either have overheads even during fault-free
+                execution or produce only approximate answers when faults
+                occur during execution.
+                We incorporated Phoenix into D-Galois, the state-of-the-art
+                distributed graph analytics system, and evaluated it on two
+                production clusters. Our evaluation shows that in the absence
+                of faults, Phoenix is  24 faster than GraphX, which provides
+                fault-tolerance using the Spark system. Phoenix also
+                outperforms a checkpoint-restart technique implemented in
+                D-Galois: in fault-free execution, Phoenix has no observable
+                overhead, whereas the checkpoint-restart technique has 31%
+                overhead. In addition, Phoenix mostly outperforms checkpointing
+                when faults occur, particularly in the common case
+                when only a small number of hosts fail simultaneously.
+               </p>
+                </div>
+            </div>
+          </div>
+
+
+        <div class="ref">
+            <div class="ref-num">[5]</div>
+            <div class="ref-entry">
+              Loc Hoang, Matteo Pontecorvi, Roshan Dathathri, Gurbinder Gill, Bozhi You, Keshav Pingali, Vijaya Ramachandran.
+              <a href="http://www.cs.utexas.edu/~gill/papers/mrbc_ppopp2019.pdf">A Round-Efficient Distributed Betweenness Centrality Algorithm</a>,
+              <a class="venue" href="https://ppopp19.sigplan.org/">ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming (PPoPP), 2019 </a>, February 2019.
+              <br>
+              <button class="collapsible">Abstract</button>
+              <div class="content">
+                <p class="abstract">
+                We present an O(n)-round distributed-memory algorithm
+                called Min-Rounds BC (MRBC) for computing the betweenness
+                centrality (BC) of every vertex in a directed
+                unweighted graph with n vertices. This algorithm can
+                also be used to solve the all-pairs-shortest-paths (APSP)
+                problem in such graphs. Our algorithm is framed in the
+                CONGEST model, and it improves the number of rounds
+                by at least a constant factor over previous results for
+                directed APSP and BC.
+                We implemented MRBC in D-Galois, the state-of-theart
+                distributed graph analytics system, incorporated additional
+                optimizations enabled by the D-Galois model, and
+                evaluated its performance on a production cluster with up
+                to 256 hosts using power-law and road networks. Compared
+                to the BC algorithm of Brandes, MRBC reduces the
+                number of rounds by 11.8× and the communication time
+                by 3.3× on the average for the graphs in our test suite.
+                As a result, MRBC is 2.6× faster on the average than
+                Brandes BC for real-world web-crawls on 256 hosts.
+
+               </p>
+                </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="ref">
+            <div class="ref-num">[6]</div>
+            <div class="ref-entry">
+              Gurbinder Gill, Roshan Dathathri, Loc Hoang, Andrew Lenharth, Keshav Pingali.
+              <a href="http://www.cs.utexas.edu/~gill/papers/abelian_EuroPar2018.pdf">Abelian: A Compiler for Graph Analytics on Distributed, Heterogeneous Platforms</a>,
+              <a class="venue" href="https://europar2018.org/">International European Conference on Parallel and Distributed Computing (Euro-Par), 2018</a>, August 2018.
+
+              <br>
+              <button class="collapsible">Abstract</button>
+              <div class="content">
+                <p class="abstract">
+                The trend towards processor heterogeneity and distributed-memory
+                has significantly increased the complexity of parallel programming. In addition,
+                the mix of applications that need to run on parallel platforms today is very diverse,
+                and includes graph applications that typically have irregular memory accesses and
+                unpredictable control-flow. To simplify the programming of graph applications
+                on such platforms, we have implemented a compiler called Abelian that translates
+                shared-memory descriptions of graph algorithms written in the Galois programming
+                model into efficient code for distributed-memory platforms with heterogeneous
+                processors. The compiler manages inter-device synchronization and
+                communication while leveraging state-of-the-art compilers for generating device specific code. The experimental results show that the novel communication optimizations
+                in the Abelian compiler reduce the volume of communication by 23×,
+                enabling the code produced by Abelian to match the performance of handwritten
+                distributed CPU and GPU programs that use the same runtime. The programs
+                produced by Abelian for distributed CPUs are roughly 2.4× faster than those
+                in the Gemini system, a third-party distributed CPU-only system, demonstrating
+                that Abelian can manage heterogeneity and distributed-memory successfully
+                while generating high-performance code.
+               </p>
+                </div>
+            </div>
+          </div>
+
+      <div class="ref">
+        <div class="ref-num">[7]</div>
+        <div class="ref-entry">
+          Roshan Dathathri*, Gurbinder Gill*, Loc Hoang, Hoang-Vu Dang, Alex Brooks, Nikoli Dryden, Marc Snir, Keshav Pingali (* Both authors contributed equally).
+          <a href="http://www.cs.utexas.edu/~gill/papers/gluon_Pldi2018.pdf">Gluon: A Communication-Optimizing Substrate for Distributed Heterogeneous Graph Analytics</a>,
+          <a class="venue" href="https://conf.researchr.org/home/pldi-2018">ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI), 2018</a>, June 2018.
+
+
+              <br>
+              <button class="collapsible">Abstract</button>
+              <div class="content">
+                <p class="abstract">
+                This paper introduces a new approach to building distributed-memory graph analytics systems that exploits heterogeneity in processor types (CPU and GPU), partitioning policies, and programming models. The key to this approach is Gluon, a communication-optimizing substrate.
+
+                Programmers write applications in a shared-memory programming system of their choice and interface these applications with Gluon using a lightweight API. Gluon enables these programs to run on heterogeneous clusters and optimizes communication in a novel way by exploiting structural and temporal invariants of graph partitioning policies.
+
+                To demonstrate Gluon’s ability to support different programming models, we interfaced Gluon with the Galois and Ligra shared-memory graph analytics systems to produce distributed-memory versions of these systems named D-Galois and D-Ligra, respectively. To demonstrate Gluon’s ability to support heterogeneous processors, we interfaced Gluon with IrGL, a state-of-the-art single-GPU system for graph analytics, to produce D-IrGL, the first multi-GPU distributed-memory graph analytics system.
+
+                Our experiments were done on CPU clusters with up to 256 hosts and roughly 70,000 threads and on multi-GPU clusters with up to 64 GPUs. The communication optimizations in Gluon improve end-to-end application execution time by ∼2.6× on the average. D-Galois and D-IrGL scale well and are faster than Gemini, the state-of-the-art distributed CPU graph analytics system, by factors of ∼3.9× and ∼4.9×, respectively, on the average.
+                </p>
+                </div>
+        </div>
+      </div>
+
+      <div class="ref">
+        <div class="ref-num">[8]</div>
+        <div class="ref-entry">
+          Hoang-Vu Dang, Roshan Dathathri, Gurbinder Gill, Alex Brooks, Nikoli Dryden, Andrew Lenharth, Loc Hoang, Keshav Pingali, Marc Snir.
+          <a href="http://www.cs.utexas.edu/~gill/papers/LCI_Ipdps2018.pdf">A Lightweight Communication Runtime for Distributed Graph Analytics</a>,
+          <a class="venue" href="http://www.ipdps.org/">IEEE International Parallel and Distributed Processing Symposium (IPDPS), 2018</a>, May 2018.
+
+              <br>
+              <button class="collapsible">Abstract</button>
+              <div class="content">
+                <p class="abstract">
+                Distributed-memory multi-core clusters enable in-memory processing of very large graphs with billions of nodes and edges. Recent distributed graph analytics systems have been built on top of MPI. However, communication in graph applications is very irregular, and each host exchanges different amounts of non-contiguous data with other hosts. MPI does not support such a communication pattern well, and it has limited ability to integrate communication with serialization, deserialization, and graph computation tasks. In this paper, we describe a lightweight communication runtime called LCI that supports a large number of threads on each host and avoids the semantic mismatches between the requirements of graph computations and the communication library in MPI. The implementation of LCI is informed by lessons learnt from two baseline MPI-based implementations. We have successfully integrated LCI with two state-of-the-art graph analytics systems - Gemini and Abelian. LCI improves the latency up to 3.5× for microbenchmarks compared to MPI solutions and improves the end-to-end performance of distributed graph algorithms by up to 2×.
+                </p>
+                </div>
+
+        </div>
+      </div>
+
+      <div class="ref">
+        <div class="ref-num">[9]</div>
+        <div class="ref-entry">
+          Gurbinder Singh Gill, Vaibhav Saxena, Rashmi Mittal, Thomas George, Yogish Sabharwal, Lalit Dagar.
+          <a href="http://www.cs.utexas.edu/~gill/papers/CAM_eval_Hipc2013.pdf">Evaluation and enhancement of weather application performance on Blue Gene/Q</a>,
+          <a class="venue" href="https://www.hipc.org/hipc2013/">High Performance Computing (HiPC), 2013</a>, December 2013.
+
+              <br>
+              <button class="collapsible">Abstract</button>
+              <div class="content">
+                <p class="abstract">
+                Numerical weather prediction (NWP) models use mathematical models of the atmosphere to predict the weather. Ongoing efforts in the weather and climate community continuously try to improve the fidelity of weather models by employing higher order numerical methods suitable for solving model equations at high resolutions. In realistic weather forecasting scenario, simulating and tracking multiple regions of interest (nests) at fine resolutions is important in understanding the interplay between multiple weather phenomena and for comprehensive predictions. These multiple regions of interest in a simulation can be significantly different in resolution and other modeling parameters. Currently, the weather simulations involving these nested regions process them one after the other in a sequential fashion. There exists a lot of prior work in performance evaluation and optimization of weather models, however most of this work is either limited to simulations involving a single domain or multiple nests with same resolution and model parameters such as model physics options. In this paper, we evaluate and enhance the performance of popular WRF model on IBM Blue Gene/Q system. We consider nested simulations with multiple child domains and study how parameters such as physics options and simulation time steps for child domains affect the computational requirements. We also analyze how such configurations can benefit from parallel execution of the children domains rather than processing them sequentially. We demonstrate that it is important to allocate processors to nested child domains in proportion to the work load associated with them when executing them in parallel. This ensures that the time spent in the different nested simulations is nearly equal, and the nested domains reach the synchronization step with the parent simulation together. Our experimental evaluation using a simple heuristic for allocation of nodes shows that the performance of WRF simulations can be improved by up to 14% by parallel execution of sibling domains with different configuration of domain sizes, temporal resolutions and physics options.
+                </p>
+                </div>
+        </div>
+      </div>
+
+      <div class="ref">
+        <div class="ref-num">[10]</div>
+        <div class="ref-entry">
+          Durgaprasad Gangodkar, Sachin Gupta, Gurbinder Singh Gill, Padam Kumar, Ankush Mittal.
+          <a href="https://dl.acm.org/citation.cfm?id=2259090">Efficient variable size template matching using fast normalized cross correlation on multicore processors</a>,
+          <a class="venue" href="#">International Conference on Advanced Computing, Networking and Security (ADCONS), 2011</a>, December 2011.
+              <br>
+              <button class="collapsible">Abstract</button>
+              <div class="content">
+                <p class="abstract">
+                Normalized Cross Correlation (NCC) is an efficient and robust way for finding the location of a template in given image. However NCC is computationally expensive. Fast normalized cross correlation (FNCC) makes use of pre-computed sum-tables to improve the computational efficiency of NCC. In this paper we propose a strategy for parallel implementation of FNCC algorithm using NVIDIA's Compute Unified Device Architecture (CUDA) for real-time template matching. We also present an approach to make proposed method adaptable to variable size templates which is an important challenge to tackle. Efficient parallelization strategies, adopted for pre-computing sum-tables and extracting data parallelism by dividing the image into series of blocks, substantially reduce required computational time. We show that by optimal utilization of different memories available on multicore architecture and exploiting the asynchronous nature of CUDA kernel calls we can obtain speedup of the order 17X as compared to the sequential implementation.
+                </p>
+                </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section">
+      <h2> Blog Entries</h2>
+
+      <div class="ref-list">
+
+        <div class="ref">
+          <div class="ref-num">[1]</div>
+          <div class="ref-entry">
+
+            <div class="img">
+              <a target="_blank" href="https://www.sigarch.org/using-intel-optane-dc-persistent-memory-for-in-memory-graph-analytics/">
+                <img src="images/sigarchOptane.jpeg" alt="ACM Sigarch" style="width:150px">
+              </a>
+            </div>
+            <p> Our work on Intel Optane was featured in the <b>"ACM SIGARCH"</b> blog, <a target="_blank" href="https://www.sigarch.org/using-intel-optane-dc-persistent-memory-for-in-memory-graph-analytics/"><b>"Using Intel Optane DC Persistent Memory for In-memory Graph Analytics"</b></a>.
+            </p>
+
+          </div>
+        </div>
+
+        <div class="ref">
+          <div class="ref-num">[2]</div>
+          <div class="ref-entry">
+            <div class="img">
+              <a target="_blank" href="https://software.intel.com/sites/default/files/parallel-universe-issue-37.pdf">
+                <img src="images/parallel_universe.png" alt="The Parallel Universe" style="width:150px">
+              </a>
+            </div>
+
+            <p> NUMA migrations are not always beneficial. Article in Intel's <b>"The Parallel Universe"</b> magazine,<a target="_blank" href="https://software.intel.com/sites/default/files/parallel-universe-issue-37.pdf"</a><b>"Measuring the Impact of NUMA Migrations on Performance"</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="section">
+      <h2> Honors  </h2>
+
+      <div class="ref-list">
+
+        <div class="ref">
+          <div class="ref-num">[1]</div>
+          <div class="ref-entry">
+            <div class="img">
+              <a target="_blank" href="images/Poster_Abelian_GurbinderGill_IPDPS.pdf">
+                <img src="images/abelian_poster.png" alt="Forest" style="width:150px">
+              </a>
+            </div>
+            <p> My poster titled <b>“Abelian: A Compiler and Runtime for Graph Analytics on Distributed, Heterogeneous Platforms”</b> won IPDPS 2018 Outstanding Poster Presentation Award, 1st Place.
+            </p>
+          </div>
+        </div>
+
+        <div class="ref">
+          <div class="ref-num">[2]</div>
+          <div class="ref-entry">
+            <p> I received the <b>MCD Fellowship</b> from Graduate School, The University of Texas at Austin, August 2013-May 2016 </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="footer">
+        Page last updated 2018-09-10.
+      </div>
+
+  </div> <!-- container end -->
+
+
+
+
+        <!-- SCRIPTS -->
+        <!-- Example: <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+        <script>
+          var coll = document.getElementsByClassName("collapsible");
+          var i;
+
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.display === "block") {
+                content.style.display = "none";
+                } else {
+                content.style.display = "block";
+              }
+              });
+            }
+          </script>
+        </body>
+      </html>
